@@ -1,0 +1,26 @@
+######################################################################
+# terraform
+######################################################################
+#  Local .terraform directories
+.terraform
+.terraform.*
+.terragrunt-cache
+.tool-versions
+.lock.hcl
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+
+*.tfvars
+
+# tfplan output
+*.tfplan
+
+######################################################################
+# anything related to mac
+######################################################################
+__MACOSX
+_MACOSX
