@@ -2,9 +2,10 @@
 See the local [pdf](./2022-11-03_task.pdf) file an for overview of the task.
 
 ## DR;TL
-I used a container to run the application on an AWS ECS/Fargate cluster behind a load balancer.  Everything provisioned by Terraform.
+I used a container to run the application on an ec2 instanc behind a load balancer.  Everything provisioned by Terraform.
 
 ## Possible Extension:
+1. I wanted to do ecs/fargate, but too little time.
 1. Time permitting, run everything from GitHub Actions.
 
 ## Details:
