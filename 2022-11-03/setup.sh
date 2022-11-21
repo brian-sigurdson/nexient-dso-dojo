@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # install docker
 sudo apt-get remove docker docker-engine docker.io containerd runc -y 
 
@@ -23,7 +22,11 @@ sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 
-# build & run docker
-sudo docker build -t mydocker:latest .
+# build & run
+# nginx
+sudo docker build -f Dockerfile.nginx -t mynginx:latest .
+sudo docker run -d --rm -p 80:80 mynginx:latest
 
-sudo docker run -d --rm -p 8080:8080 mydocker:latest
+# gin-gonic
+sudo docker build -f Dockerfile.go -t mygo:latest .
+sudo docker run -d --rm mygo:latest
