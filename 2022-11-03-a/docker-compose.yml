@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  backend:
+    image: mygo
+
+
+  frontend:
+    image: mynginx
+    ports:
+      - "80:80"  

@@ -2,31 +2,28 @@
 
 # install docker
 sudo apt-get remove docker docker-engine docker.io containerd runc -y 
-
 sudo apt-get update -y
-
 sudo apt-get install ca-certificates curl gnupg lsb-release -y
-
 sudo mkdir -p /etc/apt/keyrings
-
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
 sudo apt-get update -y
-
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
+# install compose
+sudo apt-get update -y
+sudo apt-get install docker-compose-plugin
+sudo apt-get update -y
+sudo yum install docker-compose-plugin
 
-# build & run
-# nginx
+# build frontend
 sudo docker build -f Dockerfile.nginx -t mynginx:latest .
-sudo docker run -d --rm -p 80:80 mynginx:latest
 
-# gin-gonic
+# build backend
 sudo docker build -f Dockerfile.go -t mygo:latest .
-sudo docker run -d --rm mygo:latest
+
+# docker compose up
+docker compose up --detach
