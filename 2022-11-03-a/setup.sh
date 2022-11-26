@@ -17,7 +17,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo apt-get update -y
 sudo apt-get install docker-compose-plugin
 sudo apt-get update -y
-sudo yum install docker-compose-plugin
+sudo apt-get install docker-compose-plugin -y
 
 # build frontend
 sudo docker build -f Dockerfile.nginx -t mynginx:latest .
@@ -26,4 +26,4 @@ sudo docker build -f Dockerfile.nginx -t mynginx:latest .
 sudo docker build -f Dockerfile.go -t mygo:latest .
 
 # docker compose up
-docker compose up --detach
+sudo docker compose up --detach

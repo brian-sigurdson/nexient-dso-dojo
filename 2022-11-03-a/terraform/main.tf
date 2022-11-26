@@ -20,7 +20,7 @@ resource "aws_launch_configuration" "instance" {
 
   user_data = <<-EOF
     git clone https://github.com/brian-sigurdson/nexient-dso-dojo.git 
-    cd nexient-dso-dojo/2022-11-03
+    cd nexient-dso-dojo/2022-11-03-a
     chmod +x setup.sh
     ./setup.sh
   EOF
