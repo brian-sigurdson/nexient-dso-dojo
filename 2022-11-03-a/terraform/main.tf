@@ -2,8 +2,13 @@ provider "aws" {
   region = "us-east-1"
 }
 
+locals {
+  name = "dso-dojo-20221103"
+}
+
+
 resource "aws_security_group" "instance" {
-  name = "dso-dojo-202201103"
+  name = local.name
 
   ingress {
     from_port   = var.server_port
@@ -43,7 +48,7 @@ resource "aws_autoscaling_group" "instance" {
 
   tag {
     key                 = "Name"
-    value               = "dso-dojo-202201103"
+    value               = local.name
     propagate_at_launch = true
   }
 }
@@ -61,7 +66,7 @@ data "aws_subnets" "default" {
 
 ####################    ALB     ####################
 resource "aws_alb" "instance" {
-  name               = "dso-dojo-202201103"
+  name               = local.name
   load_balancer_type = "application"
   subnets            = data.aws_subnets.default.ids
   security_groups    = [aws_security_group.alb.id]
@@ -85,7 +90,7 @@ resource "aws_lb_listener" "http" {
 }
 
 resource "aws_security_group" "alb" {
-  name = "dso-dojo-202201103"
+  name = local.name
 
   # allow inbound http requests
   ingress {
@@ -105,7 +110,7 @@ resource "aws_security_group" "alb" {
 }
 
 resource "aws_lb_target_group" "asg" {
-  name     = "dso-dojo-202201103"
+  name     = local.name
   port     = var.server_port
   protocol = "HTTP"
   vpc_id   = data.aws_vpc.default.id
