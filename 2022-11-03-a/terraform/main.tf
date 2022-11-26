@@ -8,7 +8,7 @@ locals {
 
 
 resource "aws_security_group" "instance" {
-  name = local.name
+  name = "ec2-sg-${local.name}"
 
   ingress {
     from_port   = var.server_port
@@ -66,7 +66,7 @@ data "aws_subnets" "default" {
 
 ####################    ALB     ####################
 resource "aws_alb" "instance" {
-  name               = local.name
+  name               = "alb-instance-${local.name}"
   load_balancer_type = "application"
   subnets            = data.aws_subnets.default.ids
   security_groups    = [aws_security_group.alb.id]
@@ -90,7 +90,7 @@ resource "aws_lb_listener" "http" {
 }
 
 resource "aws_security_group" "alb" {
-  name = local.name
+  name = "alb-sg-${local.name}"
 
   # allow inbound http requests
   ingress {
@@ -110,7 +110,7 @@ resource "aws_security_group" "alb" {
 }
 
 resource "aws_lb_target_group" "asg" {
-  name     = local.name
+  name     = "asg-target-group-${local.name}
   port     = var.server_port
   protocol = "HTTP"
   vpc_id   = data.aws_vpc.default.id
