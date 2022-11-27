@@ -132,7 +132,8 @@ resource "aws_lb_listener_rule" "asg" {
 
   condition {
     path_pattern {
-      values = ["*"]
+      # values = ["*"]
+      values = ["/ping"]
     }
   }
 
