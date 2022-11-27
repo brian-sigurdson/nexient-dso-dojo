@@ -110,7 +110,7 @@ resource "aws_security_group" "alb" {
 }
 
 resource "aws_lb_target_group" "asg" {
-  name     = "asg-target-group-${local.name}
+  name     = "asg-tgt-grp-${local.name}"
   port     = var.server_port
   protocol = "HTTP"
   vpc_id   = data.aws_vpc.default.id
