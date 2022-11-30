@@ -25,5 +25,8 @@ sudo docker build -f Dockerfile.nginx -t mynginx:latest .
 # build backend
 sudo docker build -f Dockerfile.go -t mygo:latest .
 
+# create a pause
+sleep 5
+
 # docker compose up
 sudo docker compose up --detach
