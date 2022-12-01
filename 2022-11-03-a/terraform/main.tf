@@ -116,8 +116,7 @@ resource "aws_lb_target_group" "asg" {
   vpc_id   = data.aws_vpc.default.id
 
   health_check {
-    path                = "/ping"
-    # path                = "/"
+    path                = "/"
     protocol            = "HTTP"
     matcher             = "200"
     interval            = 15
@@ -134,7 +133,6 @@ resource "aws_lb_listener_rule" "asg" {
   condition {
     path_pattern {
       values = ["*"]
-      # values = ["/ping"]
     }
   }
 
