@@ -10,4 +10,5 @@ Use my Udemy course to learn enough about:
 * dynamodb
 * api gateway
 * serverless framework
+
 and deploy these all with Terraform.
