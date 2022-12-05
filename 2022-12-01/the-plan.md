@@ -13,7 +13,7 @@
         - no.  i want to do it in terraform to learn the details of interacting with aws
         - i an real project, you'd certainly want a framework.
     - cognito (maybe, could be fun to put a frontend)
-    - AWS Code* / GHA 
+    - AWS Code* / GHA
         - I may supplement with my other Udemy course on AWS Code*
         - or deploy these all with Terraform in a pipeline (in aws pulled from github, or github action)
         - Although it is possible to use AWS Code, I might want to stick to GHA to get a little more practice with it (or not, code pipeline isn't that hard either.)
