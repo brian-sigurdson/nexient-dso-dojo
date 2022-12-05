@@ -1,12 +1,13 @@
 # Notes: Nexient DSO Dojo Task - 2022-11-03
 
 ## Goals
+0. **GET MY NEW ACCOUNTS SETUP SO I GET ALL FREE TIER BENEFITS (even without them sb cheap)**
 1. **NOTE:  learning and using lambda, dynamodb, api gateway, cloudfront, terraform are primary goals of this project**
 2. Use my Udemy course to how to implement the following:
     - lambda (3 lambas in 3 different languages (time permitting, but i should at least make one JS))
     - queues (step functions might be more appropriate in this instance)
     - dynamodb
-    - cloudfront
+    - cloudfront (and make it https for bks-dojo.name and bks.name)
     - api gateway
     - ~~serverless framework~~
         - no.  i want to do it in terraform to learn the details of interacting with aws
@@ -24,11 +25,11 @@
 2. Udemy course sections
     - week 1
         - [x] 1
-        - [] 20
-        - [] 21
-        - [] 2
-        - [] 3
-        - [] 4
+        - [x] 20
+        - [x] 21
+        - [] 2 mon, tue
+        - [] 3 wed, thur
+        - [] 4 sat, sun
     - week 2
         - [] 5
         - [] 6
@@ -43,11 +44,15 @@
 3. Try to use some notion of sprints, tasks, and cards without getting too bogged down in formality.  I want some organization, but not bogged down by it.  It'll probably take me a few projects before I start to work out a rythem and a balance of what works for me.  Balance expediency, professional work, and having fun.
     - Sprint 1
         - week 1: 2022-12-4 => 2022-12-10
-            - [] Udemy course sections: 1, 20, 21, 2, 3, 4
+            - [] Udemy course sections: ~~1, 20, 21~~, 2, 3, 4
             - [] TF: 
                 - [] create lambda functions with proper roles, etc...
                     - this alone may take me a bit
-                    - test individually
+                    - probably
+                    - user my Ryerson work as a guide to deploy with TF
+                        - skip logging for now
+                        - just get the lambda functions deploying for now
+                        - i may write and debug them manually in the console, then copy to VSC
                 - [] reuse some of the code from prior project
                 - [] stick with default vpc for now
         - week 2: 2022-12-11 => 2022-12-17
