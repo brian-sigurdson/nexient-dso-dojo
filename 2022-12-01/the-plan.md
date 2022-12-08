@@ -27,7 +27,7 @@
         - [x] 1
         - [x] 20
         - [x] 21
-        - [] 2 mon, tue
+        - [x] 2 mon, tue
         - [] 3 wed, thur
         - [] 4 sat, sun
     - week 2
