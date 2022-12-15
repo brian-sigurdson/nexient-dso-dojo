@@ -3,6 +3,7 @@
 ## Goals
 0. **GET MY NEW ACCOUNTS SETUP SO I GET ALL FREE TIER BENEFITS (even without them sb cheap)**
 1. **NOTE:  learning and using lambda, dynamodb, api gateway, cloudfront, terraform are primary goals of this project**
+2. **It would be nice to have an arch diagram**
 2. Use my Udemy course to how to implement the following:
     - lambda (3 lambas in 3 different languages (time permitting, but i should at least make one JS))
     - queues (step functions might be more appropriate in this instance)
@@ -77,3 +78,12 @@
             - [] Udemy course section: 14 (maybe to implement cognito)
             - [] maybe cloud formation stuff (time permitting)
                 - save for last sprint, where i can polish  
+
+
+## Terraform Related
+ - Stick with the default vpc for now.
+    - Time permitting or over time I can implement something more robust
+ - Focus on getting the following implemented:
+    - Lambdas (this is more important for client related stuff right now)
+    - CloudWatch Logs / Insights / Monitoring
+        - These are skills that will come in handy on the project.
